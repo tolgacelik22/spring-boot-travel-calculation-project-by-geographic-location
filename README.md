@@ -23,7 +23,7 @@
 **Note:** If you want to use the project with historical data, you can find the backup file in sql format in \src\main\resources. 
   - To restore from backup;
   - Go to \src\main\resources and open terminal there.
-  - Run this command: `cat backup_old.sql | docker exec -i postgresql_postgreadmin_db_1 psql -U admin`
+  - Run this command: `cat backup.sql | docker exec -i postgresql_postgreadmin_db_1 psql -U admin`
   - Command description
   - `cat <myfile>.sql | docker exec -i <my-container-name> psql -U <my-postgre-username>`
 #####
