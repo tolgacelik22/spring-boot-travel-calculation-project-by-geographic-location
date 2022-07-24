@@ -16,13 +16,13 @@
 - **Assuming you have docker installed on your computer!**
   - If it is not installed, you need to install docker by following the document https://docs.docker.com/compose/gettingstarted/
 - Clone the project.
-- Go to \src\main\resources with terminal.
+- Go to `\src\main\resources` with terminal.
 - Run `docker-compose up -d` to install PostgreSQL, postgreAdmin and Redis.
 - Run the project.
 ####
-**Note:** If you want to use the project with historical data, you can find the backup file in sql format in \src\main\resources. 
+**Note:** If you want to use the project with historical data, you can find the backup file in sql format in `\src\main\resources` 
   - To restore from backup;
-  - Go to \src\main\resources and open terminal there.
+  - Go to `\src\main\resources` and open terminal there.
   - Run this command: `cat backup.sql | docker exec -i postgresql_postgreadmin_db_1 psql -U admin`
   - Command description
   - `cat <myfile>.sql | docker exec -i <my-container-name> psql -U <my-postgre-username>`
@@ -34,8 +34,8 @@
   - Database: javadb
 ### Use:
 - The project is set to run on localhost:8080.
-- You can examine the project using the Swagger API interface with the localhost:8080/swagger-ui/index.html link on the browser.
-- With the localhost:8080/user-travels link, you can record with the following sample data as raw/json data in the body via postman.
+- You can examine the project using the Swagger API interface with the `localhost:8080/swagger-ui/index.html` link on the browser.
+- With the `localhost:8080/user-travels` link, you can record with the following sample data as raw/json data in the body via postman.
 ### Example Data:
     {
     "courierId" : 5,
@@ -45,8 +45,8 @@
     "time": "14-07-2022 16:44:45"
     }
 
-- When you send a get request to localhost:8080/user-travels link, you can see all traveled distance records.
-- With the example link localhost:8080/user-travel-data/user/5 (by changing the ID value at the end), you can list the total distance traveled by a traveler in kilometers.
+- When you send a get request to `localhost:8080/user-travels` link, you can see all traveled distance records.
+- With the example link `localhost:8080/user-travel-data/user/5` (by changing the ID value at the end), you can list the total distance traveled by a traveler in kilometers.
 
 ### Resources
 - https://start.spring.io/
