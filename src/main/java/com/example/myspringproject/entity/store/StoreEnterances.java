@@ -1,4 +1,4 @@
-package com.example.myspringproject.entity;
+package com.example.myspringproject.entity.store;
 
 import lombok.*;
 

@@ -1,6 +1,6 @@
-package com.example.myspringproject.service;
+package com.example.myspringproject.service.user;
 
-import com.example.myspringproject.dto.UserTravelsDto;
+import com.example.myspringproject.dto.user.UserTravelsDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.List;
 
-public interface IUserTravelsService {
+public interface IUserTravelService {
     UserTravelsDto save(UserTravelsDto userDto) throws IOException, ParseException;
 
     void delete(long id);

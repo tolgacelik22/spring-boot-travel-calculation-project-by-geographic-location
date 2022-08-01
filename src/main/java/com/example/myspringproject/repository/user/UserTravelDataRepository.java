@@ -1,6 +1,6 @@
-package com.example.myspringproject.repo;
+package com.example.myspringproject.repository.user;
 
-import com.example.myspringproject.entity.UserTravelData;
+import com.example.myspringproject.entity.user.UserTravelData;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;

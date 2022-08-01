@@ -1,8 +1,8 @@
-package com.example.myspringproject.controller;
+package com.example.myspringproject.controller.user;
 
-import com.example.myspringproject.dto.UserTravelDataDto;
-import com.example.myspringproject.entity.UserTravelData;
-import com.example.myspringproject.service.IUserTravelDataService;
+import com.example.myspringproject.dto.user.UserTravelDataDto;
+import com.example.myspringproject.entity.user.UserTravelData;
+import com.example.myspringproject.service.user.IUserTravelDataService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;

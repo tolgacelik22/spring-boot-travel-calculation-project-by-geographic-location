@@ -1,4 +1,4 @@
-package com.example.myspringproject.entity;
+package com.example.myspringproject.entity.user;
 
 import lombok.*;
 import org.nustaq.serialization.annotations.Serialize;

@@ -1,7 +1,7 @@
-package com.example.myspringproject.service;
+package com.example.myspringproject.service.user;
 
-import com.example.myspringproject.dto.UserTravelDataDto;
-import com.example.myspringproject.entity.UserTravelData;
+import com.example.myspringproject.dto.user.UserTravelDataDto;
+import com.example.myspringproject.entity.user.UserTravelData;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

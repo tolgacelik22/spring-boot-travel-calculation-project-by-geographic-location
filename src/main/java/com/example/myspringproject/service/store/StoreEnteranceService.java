@@ -1,10 +1,9 @@
-package com.example.myspringproject.service.impl;
+package com.example.myspringproject.service.store;
 
-import com.example.myspringproject.dto.StoreEnterancesDto;
-import com.example.myspringproject.dto.UserTravelsDto;
-import com.example.myspringproject.entity.StoreEnterances;
-import com.example.myspringproject.repo.StoreEnterancesRepository;
-import com.example.myspringproject.service.IStoreEnterancesService;
+import com.example.myspringproject.dto.store.StoreEnterancesDto;
+import com.example.myspringproject.dto.user.UserTravelsDto;
+import com.example.myspringproject.entity.store.StoreEnterances;
+import com.example.myspringproject.repository.store.StoreEnteranceRepository;
 import com.example.myspringproject.shared.DistanceCalculator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -17,9 +16,9 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class StoreEnterancesServiceImpl implements IStoreEnterancesService {
+public class StoreEnteranceService implements IStoreEnteranceService {
 
-    private final StoreEnterancesRepository storeEnterancesRepository;
+    private final StoreEnteranceRepository storeEnteranceRepository;
 
     @Override
     @Transactional
@@ -32,7 +31,7 @@ public class StoreEnterancesServiceImpl implements IStoreEnterancesService {
             storeEnterances.setCourierId(userTravelsDto.getCourierId());
             storeEnterances.setTime(userTravelsDto.getTime());
 
-            storeEnterancesRepository.save(storeEnterances);
+            storeEnteranceRepository.save(storeEnterances);
         }
 
         return storeEnterancesDto;
@@ -50,7 +49,7 @@ public class StoreEnterancesServiceImpl implements IStoreEnterancesService {
 
     @Override
     public List<StoreEnterancesDto> getAll() {
-        List<StoreEnterances> storeEnterances = storeEnterancesRepository.findAll();
+        List<StoreEnterances> storeEnterances = storeEnteranceRepository.findAll();
         List<StoreEnterancesDto> storeEnterancesDtos = new ArrayList<>();
 
         storeEnterances.forEach(item -> {

@@ -1,7 +1,7 @@
-package com.example.myspringproject.controller;
+package com.example.myspringproject.controller.user;
 
-import com.example.myspringproject.dto.UserTravelsDto;
-import com.example.myspringproject.service.IUserTravelsService;
+import com.example.myspringproject.dto.user.UserTravelsDto;
+import com.example.myspringproject.service.user.IUserTravelService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -18,7 +18,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @Api(value = "User Travels API", tags = "1- User Travels API", description = "Add a new travel record or list all travel records.")
 public class UserTravelsController {
-    private final IUserTravelsService userTravelsService;
+    private final IUserTravelService userTravelsService;
 
     @PostMapping
     @ApiOperation(value = "A method to add a new travel record.")

@@ -1,9 +1,8 @@
-package com.example.myspringproject.service.impl;
+package com.example.myspringproject.service.user;
 
-import com.example.myspringproject.dto.UserTravelDataDto;
-import com.example.myspringproject.entity.UserTravelData;
-import com.example.myspringproject.repo.UserTravelDataRepository;
-import com.example.myspringproject.service.IUserTravelDataService;
+import com.example.myspringproject.dto.user.UserTravelDataDto;
+import com.example.myspringproject.entity.user.UserTravelData;
+import com.example.myspringproject.repository.user.UserTravelDataRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -16,7 +15,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class UserTravelDataServiceImpl implements IUserTravelDataService {
+public class UserTravelDataService implements IUserTravelDataService {
     private final UserTravelDataRepository userTravelDataRepository;
     @Override
     public UserTravelDataDto save(UserTravelDataDto userTravelDataDto) throws IOException {

@@ -1,15 +1,14 @@
-package com.example.myspringproject.service.impl;
+package com.example.myspringproject.service.user;
 
-import com.example.myspringproject.dto.UserTravelsDto;
-import com.example.myspringproject.entity.StoreEnterances;
-import com.example.myspringproject.entity.Stores;
-import com.example.myspringproject.entity.UserTravelData;
+import com.example.myspringproject.dto.user.UserTravelsDto;
+import com.example.myspringproject.entity.store.StoreEnterances;
+import com.example.myspringproject.entity.store.Stores;
+import com.example.myspringproject.entity.user.UserTravelData;
 import com.example.myspringproject.model.UserModel;
-import com.example.myspringproject.entity.UserTravels;
-import com.example.myspringproject.repo.StoreEnterancesRepository;
-import com.example.myspringproject.repo.UserTravelDataRepository;
-import com.example.myspringproject.repo.UserTravelsRepository;
-import com.example.myspringproject.service.IUserTravelsService;
+import com.example.myspringproject.entity.user.UserTravels;
+import com.example.myspringproject.repository.store.StoreEnteranceRepository;
+import com.example.myspringproject.repository.user.UserTravelDataRepository;
+import com.example.myspringproject.repository.user.UserTravelsRepository;
 import com.example.myspringproject.shared.DistanceCalculator;
 import com.example.myspringproject.shared.Utils;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -31,10 +30,10 @@ import java.util.concurrent.atomic.AtomicReference;
 
 @Service
 @RequiredArgsConstructor
-public class UserTravelsServiceImpl implements IUserTravelsService, Serializable {
+public class UserTravelService implements IUserTravelService, Serializable {
 
     private final UserTravelsRepository userRepository;
-    private final StoreEnterancesRepository storeEnterancesRepository;
+    private final StoreEnteranceRepository storeEnteranceRepository;
     private final UserTravelDataRepository userTravelDataRepository;
     private static final String USERS_PREFIX = "C_USERS:";
     @Autowired
@@ -126,7 +125,7 @@ public class UserTravelsServiceImpl implements IUserTravelsService, Serializable
         storeEnterances.setCourierId(userTravelsDto.getCourierId());
         storeEnterances.setTime(userTravelsDto.getTime());
 
-        storeEnterancesRepository.save(storeEnterances);
+        storeEnteranceRepository.save(storeEnterances);
     }
 
     private AtomicInteger calculateDistance(UserTravelsDto userTravelsDto) {
